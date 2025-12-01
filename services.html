@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Html to App (H2A)</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#3498db">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="img/logo.png" alt="Logo H2A" width="50" height="50" loading="lazy">
+                <span>H2A</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="services.html" class="nav-link active">Layanan</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Kontak</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services">
+            <h1>Layanan Kami</h1>
+            <div class="service-grid">
+                <article>
+                    <h2>Pengembangan PWA</h2>
+                    <p>Migrasi website statis ke aplikasi progresif.</p>
+                    <img src="img/service1.jpg" alt="PWA Development" loading="lazy">
+                </article>
+                <article>
+                    <h2>Konsultasi UI/UX</h2>
+                    <p>Desain responsif untuk pengalaman optimal.</p>
+                    <img src="img/service2.jpg" alt="UI/UX Consultation" loading="lazy">
+                </article>
+                <article>
+                    <h2>Optimasi Kinerja</h2>
+                    <p>Caching dan lazy loading untuk kecepatan tinggi.</p>
+                    <img src="img/service3.jpg" alt="Performance Optimization" loading="lazy">
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 H2A. Semua hak dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
+</body>
+</html>

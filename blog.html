@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Html to App (H2A)</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#3498db">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="img/logo.png" alt="Logo H2A" width="50" height="50" loading="lazy">
+                <span>H2A</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="services.html" class="nav-link">Layanan</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Kontak</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog">
+            <h1>Blog Kami</h1>
+            <!-- Data blog di-hardcode untuk demo; dalam produksi, load dari JSON -->
+            <article class="post">
+                <h2>Post Pertama: Pengenalan PWA</h2>
+                <p>Progressive Web Apps mengubah web menjadi aplikasi native.</p>
+                <time datetime="2025-01-01">1 Januari 2025</time>
+                <img src="img/blog1.jpg" alt="PWA Intro" loading="lazy">
+            </article>
+            <article class="post">
+                <h2>Post Kedua: Optimasi Gambar</h2>
+                <p>Tips lazy loading untuk kinerja lebih baik.</p>
+                <time datetime="2025-02-01">1 Februari 2025</time>
+                <img src="img/blog2.jpg" alt="Image Optimization" loading="lazy">
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 H2A. Semua hak dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
+</body>
+</html>
